@@ -10,8 +10,8 @@ import requests
 from django.contrib import messages
 import pprint
 
-api_key = 'sandbox-etkBOaBAec7Zh6jLDL59Gng0xJV2o1tV'
-secret_key = 'sandbox-uC9ysXfBn2syo7ZMOW2ywhYoc9z9hTHh'
+api_key = 'sandbox-0kTaAyGRA173mUE4yzLDvYt2ebNmdnyt'
+secret_key = 'sandbox-akV61msXZL8khJqCrSbPh19HIwtvE52z'
 base_url = 'sandbox-api.iyzipay.com'
 
 
@@ -95,7 +95,7 @@ def payment(request):
         'currency': 'TRY',
         'basketId': 'B67832',
         'paymentGroup': 'PRODUCT',
-        "callbackUrl": "http://localhost:8008/result/",
+        "callbackUrl": "http://localhost:8000/result/",
         "enabledInstallments": ['2', '3', '6', '9'],
         'buyer': buyer,
         'shippingAddress': address,
