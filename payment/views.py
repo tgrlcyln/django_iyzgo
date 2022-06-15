@@ -117,7 +117,9 @@ def payment(request):
     print(json_content["token"])
     print("************************")
     sozlukToken.append(json_content["token"])
-    return HttpResponse(json_content["checkoutFormContent"])
+    #return HttpResponse(json_content["checkoutFormContent"])
+    return render(request, "payment.html", context={"x": json_content["checkoutFormContent"]})
+    #bu kısım kurcalanacak
 
 
 @require_http_methods(['POST'])
